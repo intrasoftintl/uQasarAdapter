@@ -15,8 +15,5 @@ public abstract class QueryExpression {
         return query;
     }
 
-    public void setQuery(String query) {
-        this.query = query;
-    }
 
 }//EoClass QueryExpression

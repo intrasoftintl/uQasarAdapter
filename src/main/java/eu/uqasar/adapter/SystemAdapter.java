@@ -23,6 +23,12 @@ public interface SystemAdapter {
     public   BindedSystem addSystemBindingInformation(BindingInformation bindingInformation) throws uQasarException;
 
     /*
+    *  Add a user credentials to specified BindedSystem
+    *  Returns the id_user that is binded with the BindedSystem
+    */
+    public  int addSystemBindingCredentials(Credentials credentials, int id_bindedSystem) throws uQasarException;
+
+    /*
      *  The specific method returns the valid BindedSystems that have been configured for this adapter
      */
     public List<BindedSystem> getBindedSystems() throws uQasarException;
