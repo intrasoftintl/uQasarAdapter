@@ -2,7 +2,13 @@ package eu.uqasar.adapter.model;
 
 
 public enum uQasarMetric {
+    SERVER_INFO,
     RESOURCES_PER_BINDING,
     ISSUES_PER_RESOURCE_PER_BINDING,
-    SEARCH_ISSUES
+    FIXED_ISSUES,
+    UNRESOLVED_ISSUES,
+    UNRESOLVED_BUG_ISSUES,
+    UNRESOLVED_TASK_ISSUES
+
+
 }

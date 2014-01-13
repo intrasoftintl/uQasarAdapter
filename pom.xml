@@ -10,7 +10,7 @@
     <properties>
         <db.driverClass>com.mysql.jdbc.Driver</db.driverClass>
         <db.connectionURL>jdbc:mysql://127.0.0.1:3306/</db.connectionURL>
-        <db.name>uQuasarBinding</db.name>
+        <db.name>uQasarBinding</db.name>
         <db.username>root</db.username>
         <db.password>!uflow!</db.password>
     </properties>

@@ -6,9 +6,9 @@ Generic uQasarAdapter
 
 uQasarAdapter proposes an interface to be implemented by all interesed System Adapters (ex. JiraAdapter,SonarAdapter...etc)
 
-the methods the uQasarAdapter proposes are
+the methods the uQasarAdapter proposes are:
 
-addSystemBindingInformation : add a quality control system (Jira,sonar..etc) instance at uQuasar Quality Model
+addSystemBindingInformation : add a quality control system instance (Jira,sonar..etc) at uQasarBinding database
 
 getBindedSystems : retrieve all binded Instances that are registered at uQasarBinding database
 
@@ -20,11 +20,18 @@ returns a list of measurements depending on the metric the query contains
 
 uQasarAdapter proposes a serie of Metrics to by queried by the interpreter Adapters:
 
-RESOURCES_PER_BINDING 
+    RESOURCES_PER_BINDING
 
-ISSUES_PER_RESOURCE_PER_BINDING 
+    ISSUES_PER_RESOURCE_PER_BINDING
 
-SEARCH_ISSUES 
+    FIXED_ISSUES
+
+    UNRESOLVED_ISSUES
+
+    UNRESOLVED_BUG_ISSUES
+
+    UNRESOLVED_TASK_ISSUES
+ 
 
 ---------------------------------------------------------------------
 
