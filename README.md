@@ -4,45 +4,48 @@ uQasarAdapter
 Generic uQasarAdapter
 
 
-uQasarAdapter proposes an interface to be implemented by all interesed System Adapters (ex. JiraAdapter,SonarAdapter...etc)
+This project proposes an interface that has to be implemented by all third party  Systems that provide information to uQasar (e.g. JIRA,Sonar etc.)
 
-the methods the uQasarAdapter proposes are:
+Indicative methods that are proposed by uQasarAdapter are:
 
-addSystemBindingInformation : add a quality control system instance (Jira,sonar..etc) at uQasarBinding database
+	addSystemBindingInformation : adds a third party system-instance (JIRA installation, Sonar installation  etc.) at uQasar database
 
-getBindedSystems : retrieve all binded Instances that are registered at uQasarBinding database
+	getBindedSystems : retrieves all third party system-instances that are registered at uQasar database
 
-query : invokes a specific query to a specified bindedSystem using the credentials of a specific user and 
-returns a list of measurements depending on the metric the query contains
+	query : invokes a specific query to a specified binded system-instance using the credentials of a specific user while in parallel it returns a list of measurements (metric-value)
 
 
 ----------------------------------------------------------------------
 
-uQasarAdapter proposes a serie of Metrics to by queried by the interpreter Adapters:
+An initial list  of Metrics to be queried by the implemented Adaptees are:
 
-    RESOURCES_PER_BINDING
+	PROJECTS_PER_SYSTEM_INSTANCE
 
-    ISSUES_PER_RESOURCE_PER_BINDING
+	ISSUES_PER_PROJECTS_PER_SYSTEM_INSTANCE
 
-    FIXED_ISSUES
+	FIXED_ISSUES_PER_PROJECT
 
-    UNRESOLVED_ISSUES
+	UNRESOLVED_ISSUES_PER_PROJECT
 
-    UNRESOLVED_BUG_ISSUES
+	UNRESOLVED_BUG_ISSUES_PER_PROJECT
 
-    UNRESOLVED_TASK_ISSUES
+	UNRESOLVED_TASK_ISSUES_PER_PROJECT
+
+Note: This list will be extended according to the level of maturity of each implemented adapter
  
 
 ---------------------------------------------------------------------
 
 uQasarAdapter manages certain uQuasarExceptionTypes
 
-UQASAR_DB_CONNECTION_REFUSED (when the is a problem with uQuasar database connection)
+    UQASAR_DB_CONNECTION_REFUSED (thrown when there is a problem with uQasar database connection)
 
-BINDING_SYSTEM_CONNECTION_REFUSED (when a binding system refuses the connection to the JiraAdapter)
+    BINDING_SYSTEM_CONNECTION_REFUSED (thrown when a binding system refuses the connection to the third party Adapter)
 
-BINDING_SYSTEM_BAD_URI_SYNTAX, (when the binding system base url is mal formed)
+    BINDING_SYSTEM_BAD_URI_SYNTAX, (thrown when the binding system base url is malformed)
 
-UQASAR_NOT_EXISTING_METRIC (when the queried metric is not an uQuasarMetric)
+    UQASAR_NOT_EXISTING_METRIC (thrown when the queried metric is not a proper uQasarMetric)
 
 --------------------------------------------------------------------
+
+uQasarAdapter requires a specific database in order to operate. An empty sql database is located at the root of the project folder (uQasarAdapter.sql) 

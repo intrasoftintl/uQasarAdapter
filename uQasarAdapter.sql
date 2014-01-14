@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 13, 2014 at 01:11 PM
+-- Generation Time: Jan 14, 2014 at 04:48 PM
 -- Server version: 5.5.34-0ubuntu0.13.04.1
 -- PHP Version: 5.4.9-4ubuntu2.3
 
@@ -17,28 +17,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `uQasarBinding`
+-- Database: `uQasarAdapter`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `System`
+-- Table structure for table `BindedSystem`
 --
 
-CREATE TABLE IF NOT EXISTS `System` (
-  `id_system` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `BindedSystem` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `uri` varchar(300) NOT NULL,
   `id_type` int(11) NOT NULL,
-  PRIMARY KEY (`id_system`),
+  PRIMARY KEY (`id`),
   KEY `id_type` (`id_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
--- Dumping data for table `System`
+-- Dumping data for table `BindedSystem`
 --
 
-INSERT INTO `System` (`id_system`, `uri`, `id_type`) VALUES
+INSERT INTO `BindedSystem` (`id`, `uri`, `id_type`) VALUES
 (1, 'http://localhost:8082/', 1),
 (2, 'http://95.211.223.9:8084', 1);
 
@@ -69,37 +69,30 @@ INSERT INTO `SystemType` (`id_type`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `User` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `id_system` int(11) NOT NULL,
-  PRIMARY KEY (`id_user`),
-  KEY `id_system` (`id_system`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `User`
 --
 
-INSERT INTO `User` (`id_user`, `username`, `password`, `id_system`) VALUES
-(1, 'nkotopoulou', 'volossed', 1),
-(2, 'soaptester', 'soaptester', 2);
+INSERT INTO `User` (`id`, `username`, `password`) VALUES
+(1, 'nkotopoulou', 'volossed'),
+(2, 'soaptester', 'soaptester');
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `System`
+-- Constraints for table `BindedSystem`
 --
-ALTER TABLE `System`
+ALTER TABLE `BindedSystem`
   ADD CONSTRAINT `id_type` FOREIGN KEY (`id_type`) REFERENCES `SystemType` (`id_type`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `User`
---
-ALTER TABLE `User`
-  ADD CONSTRAINT `id_system` FOREIGN KEY (`id_system`) REFERENCES `System` (`id_system`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
