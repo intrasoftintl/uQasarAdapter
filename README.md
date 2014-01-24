@@ -45,3 +45,5 @@ uQasarAdapter manages certain uQuasarExceptionTypes
 --------------------------------------------------------------------
 
 uQasarAdapter requires a specific database in order to operate. An empty sql database is located at the root of the project folder (uQasarAdapter.sql) 
+
+---------------------------------------------------------------------
