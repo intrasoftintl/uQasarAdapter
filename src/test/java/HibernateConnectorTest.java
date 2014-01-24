@@ -22,7 +22,9 @@ public class HibernateConnectorTest {
     System.out.println("---BindedSystems---");
     for (BindedSystem bindedSystem : bindedSystems) {
         System.out.println("     ----     ");
+
         System.out.println(bindedSystem.getUri());
+
         System.out.println(bindedSystem.getUser().getUsername());
     }
     }

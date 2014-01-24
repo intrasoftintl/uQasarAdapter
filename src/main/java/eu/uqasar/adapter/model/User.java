@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Table(name = "User", catalog = "uQasarAdapter")
 public class User implements Serializable {
 
-
+    //user id
     private int id;
 
     private BindedSystem bindedSystem;
@@ -27,9 +27,6 @@ public class User implements Serializable {
 
     @Column(name="password")
     private String password;
-
-
-
 
     @OneToOne(fetch = FetchType.LAZY)
     @PrimaryKeyJoinColumn
