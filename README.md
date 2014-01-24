@@ -8,9 +8,6 @@ This project proposes an interface that has to be implemented by all third party
 
 Indicative methods that are proposed by uQasarAdapter are:
 
-	addSystemBindingInformation : adds a third party system-instance (JIRA installation, Sonar installation  etc.) at uQasar database
-
-	getBindedSystems : retrieves all third party system-instances that are registered at uQasar database
 
 	query : invokes a specific query to a specified binded system-instance using the credentials of a specific user while in parallel it returns a list of measurements (metric-value)
 
@@ -38,7 +35,6 @@ Note: This list will be extended according to the level of maturity of each impl
 
 uQasarAdapter manages certain uQuasarExceptionTypes
 
-    UQASAR_DB_CONNECTION_REFUSED (thrown when there is a problem with uQasar database connection)
 
     BINDING_SYSTEM_CONNECTION_REFUSED (thrown when a binding system refuses the connection to the third party Adapter)
 

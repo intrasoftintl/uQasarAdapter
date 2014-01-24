@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JIRAAdapter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JIRAAdapter_jar</output-path>
+    <root id="archive" name="JIRAAdapter.jar">
+      <element id="module-output" name="JIRAAdapter" />
+    </root>
+  </artifact>
+</component>
