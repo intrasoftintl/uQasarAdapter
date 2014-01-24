@@ -7,7 +7,6 @@ public class uQasarException extends Exception {
 
     public enum UQasarExceptionType {
 
-        UQASAR_DB_CONNECTION_REFUSED,
         BINDING_SYSTEM_CONNECTION_REFUSED,
         BINDING_SYSTEM_BAD_URI_SYNTAX,
         UQASAR_NOT_EXISTING_METRIC
