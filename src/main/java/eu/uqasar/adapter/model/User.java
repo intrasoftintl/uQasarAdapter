@@ -1,9 +1,5 @@
 package eu.uqasar.adapter.model;
 
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
-
-import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -13,23 +9,17 @@ import java.io.Serializable;
  * Time: 1:38 PM
  * To change this template use File | Settings | File Templates.
  */
-@Entity
-@Table(name = "User", catalog = "uQasarAdapter")
+
 public class User implements Serializable {
 
-    //user id
     private int id;
 
     private BindedSystem bindedSystem;
 
-    @Column(name="username")
     private String username;
 
-    @Column(name="password")
     private String password;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @PrimaryKeyJoinColumn
     public BindedSystem getBindedSystem() {
         return this.bindedSystem;
     }
@@ -38,11 +28,6 @@ public class User implements Serializable {
         this.bindedSystem = bindedSystem;
     }
 
-    @Id
-    @Column(name = "id", unique = true, nullable = false)
-    @GeneratedValue(generator = "gen")
-    @GenericGenerator(name = "gen", strategy = "foreign",
-            parameters = @Parameter(name = "property", value = "bindedSystem"))
     public int getId() {
         return id;
     }
@@ -50,8 +35,6 @@ public class User implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
-
-
 
     public User() {
     }
