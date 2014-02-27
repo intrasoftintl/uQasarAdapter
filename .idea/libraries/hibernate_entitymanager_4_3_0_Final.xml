@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="hibernate-entitymanager-4.3.0.Final">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../GlobalDependencies/hibernate-release-4.3.0.Final/lib/jpa/hibernate-entitymanager-4.3.0.Final.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
