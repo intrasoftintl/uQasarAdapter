@@ -42,8 +42,3 @@ uQasarAdapter manages certain uQuasarExceptionTypes
 
     UQASAR_NOT_EXISTING_METRIC (thrown when the queried metric is not a proper uQasarMetric)
 
---------------------------------------------------------------------
-
-uQasarAdapter requires a specific database in order to operate. An empty sql database is located at the root of the project folder (uQasarAdapter.sql) 
-
----------------------------------------------------------------------
