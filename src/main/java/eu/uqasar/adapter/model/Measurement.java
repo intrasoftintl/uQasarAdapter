@@ -23,5 +23,16 @@ public class Measurement {
     public String getMeasurement() {
         return measurement;
     }
+  
+    public String toString() {
+        return String.format("(%s, %s)", metric, measurement);
+    }
 
+    public boolean equals(Object other){
+        if (other == this) return true;
+        if (other == null) return false;
+        if (getClass() != other.getClass()) return false;
+        Measurement mOther = (Measurement)other;
+        return (metric == mOther.getMetric() && measurement.equals(mOther.getMeasurement()));
+    }
 }
