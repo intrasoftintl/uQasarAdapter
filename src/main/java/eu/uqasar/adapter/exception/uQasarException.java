@@ -39,4 +39,8 @@ public class uQasarException extends Exception {
         super(uQasarExceptionType.name() + " : " + metric);
 
     }
+  
+    public uQasarException(String message, Throwable exceptionCause) {
+         super(message + exceptionCause);
+    }
 }
