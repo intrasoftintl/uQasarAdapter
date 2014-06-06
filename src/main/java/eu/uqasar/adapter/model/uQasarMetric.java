@@ -17,6 +17,13 @@ public enum uQasarMetric {
     COMPLEXITY,                    // cyclomatic complexity of the project
     UT_COVERAGE,                   // code coverage by unit tests
     AT_COVERAGE,                   // code coverage by acceptance tests
-    TEST_SUCCESS_DENSITY           // ratio of successfully executed tests to the overall number of tests
+    TEST_SUCCESS_DENSITY,           // ratio of successfully executed tests to the overall number of tests
+    
+        //Testing framework metrics
+    TEST_P,	// executed tests with result: PASSED
+    TEST_F,	// executed tests with result: FAILED
+    TEST_B,	// executed tests with result: BLOCKED
+    TEST_N,	// executed tests with result: NOT RUN
+    TEST_TOTAL	// total tests cases
 }
 
