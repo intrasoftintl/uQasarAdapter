@@ -34,6 +34,15 @@ public enum uQasarMetric {
     TEST_SUCCESS_DENSITY,     // ratio of successfully executed tests to the overall number of te
     TEST_FAILURES,            // number of failed tests (failure = test could be run and is failed)
     TEST_ERRORS,              // number of errored tests (error = test could not be run)
-    TESTS                     // number of tests
+    TESTS,                     // number of tests
+    
+    // Cubes expression metrics
+    AGGREGATE,
+    FACT,
+    MEMBERS,
+    CUBES,
+    MODEL,
+    CELL,
+    FACTS,
 }
 
