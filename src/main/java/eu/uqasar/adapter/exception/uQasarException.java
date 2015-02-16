@@ -10,7 +10,7 @@ public class uQasarException extends Exception {
         BINDING_SYSTEM_CONNECTION_REFUSED,
         BINDING_SYSTEM_BAD_URI_SYNTAX,
         UQASAR_NOT_EXISTING_METRIC, 
-        JSON_DATA_IS_NOT_PARSEABLE
+        ERROR_PARSING_JSON
 
     }
     /*
