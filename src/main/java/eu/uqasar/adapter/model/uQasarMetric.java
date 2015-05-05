@@ -44,5 +44,9 @@ public enum uQasarMetric {
     MODEL,
     CELL,
     FACTS,
+    
+    // Gitlab metrics
+    GIT_COMMITS,			  // Gitlab commits
+    GIT_PROJECTS,			  // Gitlab projects
 }
 
