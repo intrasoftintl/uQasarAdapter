@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eu.uqasar.adapter</groupId>
-    <artifactId>uQasarAdapter</artifactId>
+    <artifactId>uqasaradapter</artifactId>
     <version>2.1.0</version>
 
     <dependencies>
@@ -54,4 +54,12 @@
           </plugins>
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub schlotze Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/schlotze/uqasaradapter</url>
+        </repository>
+    </distributionManagement>
 </project>
